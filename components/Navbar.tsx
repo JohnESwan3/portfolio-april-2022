@@ -7,16 +7,14 @@ export default function Navbar() {
 
   return (
     <div className="sticky top-0 z-50">
-      <nav className="bg-slate-900 shadow-md">
-        <div className="mx-auto max-w-7xl sm:px-6 md:px-4 lg:px-8">
+      <nav className="bg-slate-900 shadow-md" id="nav">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <Link href="/">
                   <a>
-                    <h1 className="text-2xl font-bold text-emerald-500 transition-all hover:text-emerald-300">
-                      JS
-                    </h1>
+                    <h1 className="text-2xl font-bold text-cyan-500">JS</h1>
                   </a>
                 </Link>
               </div>
@@ -45,7 +43,7 @@ export default function Navbar() {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="inline-flex items-center justify-center rounded-md bg-slate-800 p-2 text-slate-50 shadow-inner transition-all hover:bg-emerald-700 hover:text-slate-800 focus:outline-none"
+                className="inline-flex items-center justify-center rounded-md bg-slate-900 p-2 text-cyan-500 shadow-inner transition-all hover:bg-cyan-700 hover:text-slate-100 focus:outline-none"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
@@ -87,7 +85,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-        {/* Mobile Nav */}
+
         <Transition
           show={isOpen}
           enter="transition ease-out duration-300 transform"
@@ -106,9 +104,16 @@ export default function Navbar() {
                 <Link href="/">
                   <a className="mobile-nav-item">Home</a>
                 </Link>
-                <Link href="/projects">
+                <Link href="/portfolio">
                   <a className="mobile-nav-item">Portfolio</a>
                 </Link>
+                <Link href="/blog">
+                  <a className="mobile-nav-item">Blog</a>
+                </Link>
+                <Link href="/contact">
+                  <a className="mobile-nav-item">Contact</a>
+                </Link>
+
                 <Link href="/about">
                   <a className="mobile-nav-item">About</a>
                 </Link>
