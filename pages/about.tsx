@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Hero from '../components/Home/Hero'
-const Home: NextPage = () => {
+import Hero from '../components/About/Hero'
+const About: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Home | JS</title>
+        <title>About | JS</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
@@ -19,4 +19,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default About
