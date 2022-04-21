@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Hero from '../components/Home/Hero'
+import Content from '../components/Home/Content'
+
 const Home: NextPage = () => {
   return (
     <div>
@@ -14,6 +16,7 @@ const Home: NextPage = () => {
       </Head>
       <main className="min-h-screen">
         <Hero />
+        <Content />
       </main>
     </div>
   )
