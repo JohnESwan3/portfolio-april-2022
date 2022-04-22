@@ -17,7 +17,7 @@ function Blog({ post }: Props) {
           layout="fill"
           placeholder="blur"
           blurDataURL={urlFor(post.mainImage).url()!}
-          quality={50}
+          quality={25}
           src={urlFor(post.mainImage).url()!}
           className="absolute inset-0 h-full w-full object-cover"
           alt={post.title}

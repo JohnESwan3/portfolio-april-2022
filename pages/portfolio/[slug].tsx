@@ -17,7 +17,7 @@ function Project({ project }: Props) {
           layout="fill"
           placeholder="blur"
           blurDataURL={urlFor(project.mainImage).url()!}
-          quality={50}
+          quality={25}
           src={urlFor(project.mainImage).url()!}
           className="absolute inset-0 h-full w-full object-cover"
           alt={project.title}
