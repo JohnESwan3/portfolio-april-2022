@@ -24,25 +24,11 @@ export default function Content() {
             </p>
           </div>
         </div>
-        {/* Large Screen Image */}
-        <div className=" mx-auto mr-0 hidden w-full transform duration-300 hover:-translate-y-5 hover:shadow-xl md:max-w-sm lg:block">
-          <Image
-            layout="responsive"
-            width={384}
-            height={621}
-            placeholder="blur"
-            blurDataURL="https:/kitwind.io/assets/kometa/two-thirds-phone.png"
-            quality={50}
-            src="https:/kitwind.io/assets/kometa/two-thirds-phone.png"
-            className="object-cover object-top"
-          />
-        </div>
+
         {/* Small Screen Image */}
-        <div className="mx-auto w-full transform object-top duration-300 hover:-translate-y-5 hover:shadow-xl sm:block md:max-w-sm lg:hidden lg:h-auto xl:mr-24">
+        <div className="mx-auto w-full transform object-top duration-300 hover:-translate-y-5 hover:shadow-xl sm:block md:max-w-sm  lg:h-auto xl:mr-24">
           <Image
-            layout="responsive"
-            width={384}
-            height={256}
+            layout="fill"
             placeholder="blur"
             blurDataURL="https://kitwind.io/assets/kometa/two-thirds-phone.png"
             quality={50}
