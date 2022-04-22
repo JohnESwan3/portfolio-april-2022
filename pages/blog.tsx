@@ -10,7 +10,6 @@ interface Props {
 }
 
 export default function Blog({ posts }: Props) {
-  console.log(posts)
   return (
     <div className="min-h-screen">
       <Head>
@@ -57,7 +56,8 @@ export const getServerSideProps = async () => {
     _id,
     title,
     mainImage,
-    slug
+    slug,
+    description
   }`
 
   const posts = await sanityClient.fetch(query)
