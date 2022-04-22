@@ -4,28 +4,27 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { sanityClient, urlFor } from '../sanity'
 import { Post } from '../typings'
-import Project from './portfolio/[slug]'
 
 interface Props {
   posts: [Post]
 }
 
 export default function Blog({ posts }: Props) {
+  console.log(posts)
   return (
-    <div>
+    <div className="min-h-screen">
       <Head>
-        <title>Blog | JS</title>
+        <title>Portfolio | JS</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
           content="John Swan's Front-End Web Developer portfolio. Open for hire and freelancing opportunities."
         />
       </Head>
-      <main className="min-h-screen">
-        <Hero />
-      </main>
 
-      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-3 p-2 sm:grid-cols-2 md:gap-6">
+      <Hero />
+
+      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-3 p-2 sm:grid-cols-2 md:gap-6 md:p-6  lg:grid-cols-3">
         {posts.map((post) => (
           <Link key={post._id} href={`/blog/${post.slug.current}`}>
             <div className="group cursor-pointer overflow-hidden rounded-lg border shadow-md">
@@ -53,11 +52,10 @@ export default function Blog({ posts }: Props) {
 
 // SSR the Sanity Data
 export const getServerSideProps = async () => {
-  const query = `[*_type == "post"]{
+  const query = `*[_type == "post"]{
     _id,
     title,
     mainImage,
-    description,
     slug
   }`
 
