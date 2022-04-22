@@ -1,4 +1,3 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -37,7 +36,6 @@ export default function Portfolio({ projects }: Props) {
                 src={urlFor(project.mainImage).url()!}
                 className="h-60 w-full object-cover transition-transform duration-200 ease-in-out group-hover:scale-105"
                 alt={project.title}
-                priority
               />
               <div className="flex justify-between bg-white p-5">
                 <div>
