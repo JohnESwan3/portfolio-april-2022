@@ -25,7 +25,7 @@ export default function Content() {
           </div>
         </div>
         {/* Large Screen Image */}
-        <div className=" mx-auto mr-0 w-full transform duration-300 hover:-translate-y-5 hover:shadow-xl sm:hidden md:max-w-sm lg:block">
+        <div className=" mx-auto mr-0 hidden w-full transform duration-300 hover:-translate-y-5 hover:shadow-xl md:max-w-sm lg:block">
           <Image
             layout="responsive"
             width={384}
@@ -35,6 +35,7 @@ export default function Content() {
             quality={50}
             src="https:/kitwind.io/assets/kometa/two-thirds-phone.png"
             priority
+            className=""
           />
         </div>
         {/* Small Screen Image */}
