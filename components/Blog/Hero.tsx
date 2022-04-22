@@ -11,6 +11,7 @@ export default function Hero() {
         src="https://images.unsplash.com/photo-1636894289636-2c33451639b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
         className="absolute inset-0 h-full w-full object-cover"
         alt=""
+        priority
       />
       <div className="relative bg-slate-900 bg-opacity-75 p-5 backdrop-blur-sm md:p-20">
         <div className="mx-auto px-4 py-16 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 lg:py-20">
