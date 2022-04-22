@@ -17,3 +17,19 @@ export interface Post {
   }
   body: [object]
 }
+
+export interface Project {
+  _id: string
+  _createdAt: string
+  title: string
+
+  mainImage: {
+    asset: {
+      url: string
+    }
+  }
+  slug: {
+    current: string
+  }
+  body: [object]
+}
