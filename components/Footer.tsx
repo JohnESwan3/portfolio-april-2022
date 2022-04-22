@@ -35,9 +35,9 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact">
+                  {/* <Link href="/contact">
                     <a className="footer-secondary">Contact</a>
-                  </Link>
+                  </Link> */}
                 </li>
               </ul>
             </div>

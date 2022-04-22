@@ -15,7 +15,12 @@ function Skill({ skill }: Props) {
         <div className="max-w-screen-sm sm:mx-auto sm:text-center">
           <div className="mb-5 inline-block rounded-full sm:mx-auto">
             <div className="mb-4 flex h-32 w-32 items-center justify-center rounded-full">
-              <img src={urlFor(skill.mainImage).url()!} alt="" />
+              <img
+                width={128}
+                height={128}
+                src={urlFor(skill.mainImage).url()!}
+                alt=""
+              />
             </div>
           </div>
           <h2 className="mb-4 font-sans text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl sm:leading-none">

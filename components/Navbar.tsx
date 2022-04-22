@@ -29,9 +29,9 @@ export default function Navbar() {
                   <Link href="/blog">
                     <a className="full-nav-item">Blog</a>
                   </Link>
-                  <Link href="/contact">
+                  {/* <Link href="/contact">
                     <a className="full-nav-item">Contact</a>
-                  </Link>
+                  </Link> */}
                   <Link href="/about">
                     <a className="full-nav-item">About</a>
                   </Link>
@@ -110,9 +110,9 @@ export default function Navbar() {
                 <Link href="/blog">
                   <a className="mobile-nav-item">Blog</a>
                 </Link>
-                <Link href="/contact">
+                {/* <Link href="/contact">
                   <a className="mobile-nav-item">Contact</a>
-                </Link>
+                </Link> */}
 
                 <Link href="/about">
                   <a className="mobile-nav-item">About</a>
