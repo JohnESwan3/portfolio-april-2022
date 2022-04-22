@@ -38,7 +38,7 @@ function Project({ project }: Props) {
       <div className="max-w-7xl">
         {/* Tech Stack */}
         {/* Text Body */}
-        <article className="mx-auto max-w-3xl p-5 font-bold">
+        <article className="mx-auto min-h-screen max-w-3xl p-5 font-bold">
           <div className="mt-10">
             <PortableText
               dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}

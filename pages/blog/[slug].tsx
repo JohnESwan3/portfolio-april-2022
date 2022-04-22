@@ -29,6 +29,7 @@ function Blog({ post }: Props) {
           </div>
         </div>
       </div>
+      <article className="mx-auto min-h-screen max-w-3xl p-5 font-bold"></article>
     </main>
   )
 }

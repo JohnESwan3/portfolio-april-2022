@@ -33,6 +33,7 @@ export default function Blog({ posts }: Props) {
                 blurDataURL={urlFor(post.mainImage).url()!}
                 width={350}
                 height={240}
+                quality={50}
                 src={urlFor(post.mainImage).url()!}
                 className="h-60 w-full object-cover transition-transform duration-200 ease-in-out group-hover:scale-105"
                 alt={post.title}
