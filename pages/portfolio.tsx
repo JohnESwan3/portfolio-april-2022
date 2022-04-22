@@ -57,7 +57,8 @@ export const getServerSideProps = async () => {
     _id,
     title,
     mainImage,
-    slug
+    slug,
+    description
   }`
 
   const projects = await sanityClient.fetch(query)

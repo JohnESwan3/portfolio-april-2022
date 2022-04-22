@@ -25,20 +25,18 @@ function Project({ project }: Props) {
         />
         <div className="relative bg-slate-900 bg-opacity-75 p-5 backdrop-blur-sm md:p-20">
           <div className="mx-auto px-4 py-16 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 lg:py-20">
-            <div className="flex flex-col items-center justify-between xl:flex-row">
-              <div className="w-full max-w-xl xl:w-7/12 xl:pr-16">
-                <h2 className="max-w-lg font-sans text-3xl font-semibold tracking-tight text-white sm:text-4xl sm:leading-none">
-                  {project.title}
-                </h2>
-              </div>
-            </div>
+            <div className="flex flex-col items-center justify-between xl:flex-row"></div>
           </div>
         </div>
       </div>
-      <div className="max-w-7xl">
+      <div className="mx-auto max-w-7xl">
         {/* Tech Stack */}
         {/* Text Body */}
-        <article className="mx-auto min-h-screen max-w-3xl p-5 font-bold">
+        <article className="mx-auto mt-10 mb-10 max-w-3xl p-5 font-bold">
+          <h1 className="mb-3 text-3xl">{project.title}</h1>
+          <h2 className="mb-2 text-xl font-light text-slate-600">
+            {project.description}
+          </h2>
           <div className="mt-10">
             <PortableText
               dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
@@ -99,9 +97,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         _id,
         createdAt,
         title,
+        description,
         mainImage,
         slug,
-        body
+        body,
     }`
   const project = await sanityClient.fetch(query, {
     slug: params?.slug,
