@@ -28,7 +28,9 @@ export default function Content() {
         {/* Small Screen Image */}
         <div className="mx-auto w-full transform object-top duration-300 hover:-translate-y-5 hover:shadow-xl sm:block md:max-w-sm  lg:h-auto xl:mr-24">
           <Image
-            layout="fill"
+            layout="responsive"
+            width={300}
+            height={350}
             placeholder="blur"
             blurDataURL="https://kitwind.io/assets/kometa/two-thirds-phone.png"
             quality={50}
