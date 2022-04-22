@@ -2,6 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Hero from '../components/Home/Hero'
 import Content from '../components/Home/Content'
+import Process from '../components/Home/Process'
+import Skills from '../components/Home/Skills'
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +19,8 @@ const Home: NextPage = () => {
       <main className="min-h-screen">
         <Hero />
         <Content />
+        <Process />
+        <Skills />
       </main>
     </div>
   )
