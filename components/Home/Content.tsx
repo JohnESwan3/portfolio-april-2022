@@ -29,13 +29,12 @@ export default function Content() {
           <Image
             layout="responsive"
             width={384}
-            height={621.44}
+            height={621}
             placeholder="blur"
             blurDataURL="https:/kitwind.io/assets/kometa/two-thirds-phone.png"
             quality={50}
             src="https:/kitwind.io/assets/kometa/two-thirds-phone.png"
-            priority
-            className=""
+            className="object-cover object-top"
           />
         </div>
         {/* Small Screen Image */}
