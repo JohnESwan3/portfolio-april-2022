@@ -56,7 +56,11 @@ function Project({ project }: Props) {
                   <li className="ml-4 list-disc">{children}</li>
                 ),
                 link: ({ href, children }: any) => (
-                  <a href={href} className="text-blue-500 hover:underline">
+                  <a
+                    href={href}
+                    target="_blank"
+                    className="text-blue-500 hover:underline"
+                  >
                     {children}
                   </a>
                 ),
