@@ -48,7 +48,7 @@ function Skill({ skill }: Props) {
                   <p className="my-5 text-lg font-normal" {...props} />
                 ),
                 li: ({ children }: any) => (
-                  <li className="ml-4 list-disc">{children}</li>
+                  <li className="ml-4 list-disc font-semibold">{children}</li>
                 ),
                 link: ({ href, children }: any) => (
                   <a

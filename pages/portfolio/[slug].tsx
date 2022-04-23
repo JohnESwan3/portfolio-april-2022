@@ -53,7 +53,7 @@ function Project({ project }: Props) {
                   <p className="my-5 text-lg font-normal" {...props} />
                 ),
                 li: ({ children }: any) => (
-                  <li className="ml-4 list-disc">{children}</li>
+                  <li className="font-semi-bold ml-4 list-disc">{children}</li>
                 ),
                 link: ({ href, children }: any) => (
                   <a
