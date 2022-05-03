@@ -119,7 +119,7 @@ export default function Process() {
               <div className="h-full w-px bg-slate-300" />
             </div>
             <div className="transform rounded-lg border-slate-50 py-6 px-8 duration-300 hover:shadow-xl group-hover:-translate-y-5">
-              <p className="mb-2 text-lg font-bold">Plan</p>
+              <p className="mb-2 text-lg font-bold">Tech</p>
               <p className="text-slate-700">
                 Here, the tech stack is planned out. I decide what technologies
                 will be used to build the website. This can include TailwindCSS,
