@@ -10,7 +10,7 @@ interface Props {
 
 function Blog({ post }: Props) {
   return (
-    <main>
+    <main className="bg-slate-100">
       {/* Banner */}
       <div className="relative">
         <Image

@@ -10,7 +10,7 @@ interface Props {
 
 function Project({ project }: Props) {
   return (
-    <main>
+    <main className="bg-slate-100">
       {/* Banner */}
       <div className="relative">
         <Image
@@ -32,7 +32,7 @@ function Project({ project }: Props) {
       <div className="mx-auto max-w-7xl">
         {/* Tech Stack */}
         {/* Text Body */}
-        <article className="mx-auto mt-10 mb-10 min-h-screen max-w-3xl p-5 font-bold">
+        <article className="mx-auto min-h-screen max-w-3xl p-5 py-10 font-bold">
           <h1 className="mb-3 text-3xl">{project.title}</h1>
           <h2 className="mb-2 text-xl font-light text-slate-600">
             {project.description}

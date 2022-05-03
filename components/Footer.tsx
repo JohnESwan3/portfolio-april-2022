@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <div className="bg-slate-900">
+    <footer className="bg-slate-900">
       <div className="mx-auto px-4 pt-16 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8">
         <div className="row-gap-10 lg:grid-cols-16 mb-8 grid">
           <div className="row-gap-8 grid grid-cols-2 gap-5 md:grid-cols-4 lg:col-span-4">
@@ -41,7 +41,7 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div>
+            {/* <div>
               <p className="footer-main">Find Me At</p>
               <ul className="mt-2 space-y-2">
                 <li>
@@ -54,8 +54,8 @@ export default function Footer() {
                   </a>
                 </li>
               </ul>
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
               <p className="footer-main">Other Info</p>
               <ul className="mt-2 space-y-2">
                 <li>
@@ -69,7 +69,7 @@ export default function Footer() {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
           {/* Email Form */}
           <div className="md:max-w-md lg:col-span-2"></div>
@@ -112,6 +112,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   )
 }
