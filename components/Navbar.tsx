@@ -13,7 +13,7 @@ export default function Navbar() {
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <Link href="/">
-                  <a>
+                  <a aria-label="Home">
                     <h1 className="text-2xl font-bold text-cyan-500">JS</h1>
                   </a>
                 </Link>
@@ -21,19 +21,27 @@ export default function Navbar() {
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   <Link href="/">
-                    <a className="full-nav-item">Home</a>
+                    <a className="full-nav-item" aria-label="Home">
+                      Home
+                    </a>
                   </Link>
                   <Link href="/portfolio">
-                    <a className="full-nav-item">Portfolio</a>
+                    <a className="full-nav-item" aria-label="Portfolio">
+                      Portfolio
+                    </a>
                   </Link>
                   <Link href="/blog">
-                    <a className="full-nav-item">Blog</a>
+                    <a className="full-nav-item" aria-label="Blog">
+                      Blog
+                    </a>
                   </Link>
                   {/* <Link href="/contact">
                     <a className="full-nav-item">Contact</a>
                   </Link> */}
                   <Link href="/about">
-                    <a className="full-nav-item">About</a>
+                    <a className="full-nav-item" aria-label="About">
+                      About
+                    </a>
                   </Link>
                 </div>
               </div>
@@ -102,20 +110,26 @@ export default function Navbar() {
                 className="space-y-1 px-2 pt-2 pb-3 text-center transition-all sm:px-3"
               >
                 <Link href="/">
-                  <a className="mobile-nav-item">Home</a>
+                  <a className="mobile-nav-item" aria-label="Home">
+                    Home
+                  </a>
                 </Link>
-                <Link href="/portfolio">
+                <Link href="/portfolio" aria-label="Portfolio">
                   <a className="mobile-nav-item">Portfolio</a>
                 </Link>
                 <Link href="/blog">
-                  <a className="mobile-nav-item">Blog</a>
+                  <a className="mobile-nav-item" aria-label="Blog">
+                    Blog
+                  </a>
                 </Link>
                 {/* <Link href="/contact">
                   <a className="mobile-nav-item">Contact</a>
                 </Link> */}
 
                 <Link href="/about">
-                  <a className="mobile-nav-item">About</a>
+                  <a className="mobile-nav-item" aria-label="About">
+                    About
+                  </a>
                 </Link>
               </div>
             </div>

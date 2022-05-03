@@ -11,17 +11,23 @@ export default function Footer() {
               <ul className="mt-2 space-y-2">
                 <li>
                   <Link href="/">
-                    <a className="footer-secondary">Home</a>
+                    <a className="footer-secondary" aria-label="Home">
+                      Home
+                    </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/portfolio">
-                    <a className="footer-secondary">Portfolio</a>
+                    <a className="footer-secondary" aria-label="Portfolio">
+                      Portfolio
+                    </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/blog">
-                    <a className="footer-secondary">Blog</a>
+                    <a className="footer-secondary" aria-label="Blog">
+                      Blog
+                    </a>
                   </Link>
                 </li>
               </ul>
@@ -31,7 +37,9 @@ export default function Footer() {
               <ul className="mt-2 space-y-2">
                 <li>
                   <Link href="/about">
-                    <a className="footer-secondary">About Me</a>
+                    <a className="footer-secondary" aria-label="About">
+                      About Me
+                    </a>
                   </Link>
                 </li>
                 <li>
@@ -83,6 +91,7 @@ export default function Footer() {
             <a
               href="https://twitter.com/John3Swan"
               target="_blank"
+              aria-label="Twitter"
               className="text-slate-500 transition-colors duration-300 hover:text-cyan-500"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
@@ -93,6 +102,7 @@ export default function Footer() {
             <a
               href="https://www.linkedin.com/in/jes3/"
               target="_blank"
+              aria-label="LinkedIn"
               className="text-slate-500 transition-colors duration-300 hover:text-cyan-500"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
@@ -103,6 +113,7 @@ export default function Footer() {
             <a
               href="https://github.com/JohnESwan3"
               target="_blank"
+              aria-label="Github"
               className="text-slate-500 transition-colors duration-300 hover:text-cyan-500"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">

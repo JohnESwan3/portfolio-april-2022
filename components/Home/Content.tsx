@@ -32,10 +32,11 @@ export default function Content() {
             width={300}
             height={350}
             placeholder="blur"
-            blurDataURL="https://kitwind.io/assets/kometa/two-thirds-phone.png"
+            blurDataURL="/two-thirds-phone.webp"
             quality={50}
-            src="https://kitwind.io/assets/kometa/two-thirds-phone.png"
+            src="/two-thirds-phone.webp"
             className="object-cover object-top"
+            alt="iphone with swirl"
             priority
           />
         </div>
@@ -44,7 +45,7 @@ export default function Content() {
         <div className="relative mx-auto flex flex-col-reverse px-4 py-16 sm:max-w-xl md:max-w-full md:px-8 lg:block lg:flex-col lg:py-32 xl:py-48">
           <div className="z-0 -mx-4 flex h-full justify-center overflow-hidden lg:absolute lg:bottom-0 lg:left-0 lg:w-1/2 lg:items-center lg:justify-end lg:pt-24 lg:pb-16 lg:pr-8 xl:pr-0">
             <img
-              src="https://kitwind.io/assets/kometa/laptop.png"
+              src="/laptop.webp"
               className="h-auto w-full transform object-cover object-right duration-300 hover:-translate-x-10 lg:h-full lg:w-auto"
               alt="Laptop with Swirl Design"
             />
