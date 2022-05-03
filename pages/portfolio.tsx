@@ -24,7 +24,7 @@ export default function Portfolio({ projects }: Props) {
 
       <Hero />
 
-      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-3 p-2 sm:grid-cols-2 md:gap-6 md:p-6  lg:grid-cols-3">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-3 p-2 sm:grid-cols-2 md:gap-6 md:p-6  lg:grid-cols-3">
         {projects.map((project) => (
           <Link key={project._id} href={`/portfolio/${project.slug.current}`}>
             <div className="group cursor-pointer overflow-hidden rounded-lg border shadow-md">
@@ -53,7 +53,7 @@ export default function Portfolio({ projects }: Props) {
 
 // SSR the Sanity Data
 export const getServerSideProps = async () => {
-  const query = `*[_type == "project"]{
+  const query = `*[_type == "project"] | order(title asc){
     _id,
     title,
     mainImage,

@@ -1,3 +1,5 @@
+import { moveEmitHelpers } from 'typescript'
+
 export default {
   name: 'post',
   title: 'Post',
@@ -57,12 +59,28 @@ export default {
       type: 'blockContent',
     },
   ],
+  orderings: [
+    {
+      title: 'Relase Date, New',
+      name: 'releaseDateDesc',
+      by: [{ field: 'releaseDate', direction: 'desc' }],
+    },
+  ],
 
   preview: {
     select: {
       title: 'title',
       author: 'author.name',
       media: 'mainImage',
+    },
+
+    prepare(post, viewOptions = {}) {
+      const title =
+        viewOptions.ordering && viewOptions.ordering.name === 'releaseDateDesc'
+          ? `${post.title} (${post.publishedAt})`
+          : post.title
+
+      return { title: title }
     },
     prepare(selection) {
       const { author } = selection

@@ -42,12 +42,30 @@ export default {
     },
   ],
 
+  orderings: [
+    {
+      title: 'Alphabetical',
+      name: 'alphabetical',
+      by: [{ field: 'title', direction: 'asc' }],
+    },
+  ],
+
   preview: {
     select: {
       title: 'title',
       author: 'author.name',
       media: 'mainImage',
     },
+
+    prepare(project, viewOptions = {}) {
+      const title =
+        viewOptions.ordering && viewOptions.order.name === 'alphabetical'
+          ? `${project.title} (${project.title})`
+          : project.title
+
+      return { title: title }
+    },
+
     prepare(selection) {
       const { author } = selection
       return Object.assign({}, selection, {
