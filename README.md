@@ -30,7 +30,7 @@ Sanity.io takes care of most of the content on the website.
   ![Blog Section](./public/screenshot6.jpg)
   ![Blog Section Page](./public/screenshot7.jpg)
 
-## The Disgn
+## The Design
 I wanted to give this website a modern feel and make use of banners throught the website. Each page, minus the skills pages, use a banner with a blurred filter on top. I don't like the way that scrolling animations look, but hover animations are great and add interactivity to elements, so I made use of those. I am particularly proud of the hover animations over the skills section.
 I didn't want to go with a pure white background because other project screenshots blend in if they have a white background, so I went with a very light gray/slate. I am still unsure about the home page images with the phone and tablet, but I am happy with how they look.
 
