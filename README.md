@@ -1,23 +1,42 @@
-# Next.js + Tailwind CSS Example
+# Portfolio 2022
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+![John Swan Portfolio](./public/portfolio1.jpg)
 
-## Deploy your own
+## Built With
+* Next.js
+  * Server Side Rendering
+  * Incremental Static Regeneration
+  * Next Components (Link, Image, etc)
+* Tailwind CSS
+* Sanity CMS
+  * Projects
+  * Skills
+  * Blog
+* TypeScript
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+# About This Project
+My portfolio has gone through many iterations, and I am pretty happy with this one. A few things I might change later on are adjusting the project images to show both a desktop and mobile view mockup instead of just a screenshot, and I have a hard time deciding on the content on the home page, but I am happy with the styling for those components.
+I built this project after spending a few weeks learning both Next.js and TypeScript, and figuring out the best ways to implement Sanity correctly while taking advantages of the features of Next.js was a pain but I landed on Incremental Static Regeneration to keep the CMS pages rendered on the server but able to be updated without reloading the whole application.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+#### Sanity CMS
+Sanity.io takes care of most of the content on the website. 
+* The skills section of the home screen
+![Portfolio Skills](./public/screenshot2.jpg)
+![Portfolio Skills Page](./public/screenshot3.jpg)
+* The Projects Section
+![Project Section](./public/screenshot4.jpg)
+![Project Section Page](./public/screenshot5.jpg)
+* The Blog Section
+  ![Blog Section](./public/screenshot6.jpg)
+  ![Blog Section Page](./public/screenshot7.jpg)
 
-## How to use
+## The Disgn
+I wanted to give this website a modern feel and make use of banners throught the website. Each page, minus the skills pages, use a banner with a blurred filter on top. I don't like the way that scrolling animations look, but hover animations are great and add interactivity to elements, so I made use of those. I am particularly proud of the hover animations over the skills section.
+I didn't want to go with a pure white background because other project screenshots blend in if they have a white background, so I went with a very light gray/slate. I am still unsure about the home page images with the phone and tablet, but I am happy with how they look.
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-# or
-pnpm create next-app -- --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## Current issues
+* The home page banner doesn't show up correctly on Firefox after a recent browser update. It should be an easy fix.
+* The div next to the laptop image sits on top of the image on desktop, so hover animation feels broken.
+  * I only recently discovered the cause because of a Chrome extension called Pesticide which shows me this
+  * ![Layout Issue](./public/screenshot8.jpg)
+* Loading can occasionally be slow still
