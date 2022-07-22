@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { Transition } from '@headlessui/react'
 import Link from 'next/link'
+import {useRouter} from 'next/router'
 
 export default function Navbar() {
+  const router = useRouter();
+  const currentRoute = router.pathname;
+
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -21,17 +25,17 @@ export default function Navbar() {
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   <Link href="/">
-                    <a className="full-nav-item" aria-label="Home">
+                    <a className={currentRoute === "/" ? "full-nav-active" : "full-nav-item"} aria-label="Home">
                       Home
                     </a>
                   </Link>
                   <Link href="/portfolio">
-                    <a className="full-nav-item" aria-label="Portfolio">
+                    <a className={currentRoute === "/portfolio" ? "full-nav-active" : 'full-nav-item'} aria-label="Portfolio">
                       Portfolio
                     </a>
                   </Link>
                   <Link href="/blog">
-                    <a className="full-nav-item" aria-label="Blog">
+                    <a className={currentRoute === "/blog" ? "full-nav-active" : "full-nav-item"} aria-label="Blog" >
                       Blog
                     </a>
                   </Link>
@@ -39,7 +43,7 @@ export default function Navbar() {
                     <a className="full-nav-item">Contact</a>
                   </Link> */}
                   <Link href="/about">
-                    <a className="full-nav-item" aria-label="About">
+                    <a className={currentRoute === "/about" ?"full-nav-active" : "full-nav-item"} aria-label="About">
                       About
                     </a>
                   </Link>
@@ -110,15 +114,15 @@ export default function Navbar() {
                 className="space-y-1 px-2 pt-2 pb-3 text-center transition-all sm:px-3"
               >
                 <Link href="/">
-                  <a className="mobile-nav-item" aria-label="Home">
+                  <a className={currentRoute === "/" ? "mobile-nav-active" : "mobile-nav-item"} aria-label="Home">
                     Home
                   </a>
                 </Link>
                 <Link href="/portfolio" aria-label="Portfolio">
-                  <a className="mobile-nav-item">Portfolio</a>
+                  <a className={currentRoute === "/portfolio" ? "mobile-nav-active" : "mobile-nav-item"}>Portfolio</a>
                 </Link>
                 <Link href="/blog">
-                  <a className="mobile-nav-item" aria-label="Blog">
+                  <a className={currentRoute === "/blog" ? "mobile-nav-active" : "mobile-nav-item"} aria-label="Blog">
                     Blog
                   </a>
                 </Link>
@@ -127,7 +131,7 @@ export default function Navbar() {
                 </Link> */}
 
                 <Link href="/about">
-                  <a className="mobile-nav-item" aria-label="About">
+                  <a className={currentRoute === "/about" ? "mobile-nav-active" : "mobile-nav-item"} aria-label="About">
                     About
                   </a>
                 </Link>

@@ -1,4 +1,3 @@
-import { render } from '@headlessui/react/dist/utils/render'
 import Image from 'next/image'
 
 export default function Content() {
@@ -26,14 +25,14 @@ export default function Content() {
         </div>
 
         {/* Small Screen Image */}
-        <div className="mx-auto w-full transform object-top duration-300 hover:-translate-y-5 hover:shadow-xl sm:block md:max-w-sm  lg:h-auto xl:mr-24">
+        <div className="mx-auto w-full transform object-top duration-300 hover:-translate-y-5 sm:block md:max-w-sm  lg:h-auto xl:mr-24">
           <Image
             layout="responsive"
             width={300}
-            height={350}
+            height={355}
             placeholder="blur"
             blurDataURL="/two-thirds-phone.webp"
-            quality={50}
+            quality={100}
             src="/two-thirds-phone.webp"
             className="object-cover object-top"
             alt="iphone with swirl"
@@ -43,14 +42,14 @@ export default function Content() {
       </section>
       <section>
         <div className="relative mx-auto flex flex-col-reverse px-4 py-16 sm:max-w-xl md:max-w-full md:px-8 lg:block lg:flex-col lg:py-32 xl:py-48">
-          <div className="z-0 -mx-4 flex h-full justify-center overflow-hidden lg:absolute lg:bottom-0 lg:left-0 lg:w-1/2 lg:items-center lg:justify-end lg:pt-24 lg:pb-16 lg:pr-8 xl:pr-0">
+          <div className="z-0 -mx-4 flex h-full justify-center overflow-hidden lg:absolute lg:bottom-0 lg:left-0 lg:w-1/2 lg:items-center lg:justify-end lg:pt-24 lg:pb-16 lg:pr-8 xl:pr-0 z-10">
             <img
               src="/laptop.webp"
               className="h-auto w-full transform object-cover object-right duration-300 hover:-translate-x-10 lg:h-full lg:w-auto"
               alt="Laptop with Swirl Design"
             />
           </div>
-          <div className="relative mx-auto flex max-w-xl justify-end lg:max-w-screen-xl xl:pr-32">
+          <div className="relative mx-auto flex max-w-xl justify-end lg:max-w-screen-xl xl:pr-32 z-0">
             <div className="mb-16 lg:mb-0 lg:max-w-lg lg:pr-5">
               <div className="mb-6 max-w-xl">
                 <div>
