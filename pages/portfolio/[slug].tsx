@@ -3,6 +3,7 @@ import { GetStaticProps } from 'next'
 import { sanityClient, urlFor } from '../../sanity'
 import { Project } from '../../typings'
 import PortableText from 'react-portable-text'
+import Head from "next/head";
 
 interface Props {
   project: Project
@@ -11,6 +12,17 @@ interface Props {
 function Project({ project }: Props) {
   return (
     <main className="bg-slate-100">
+        <Head>
+            <title>JS | {project.title}</title>
+            <link rel="icon" href="/favicon.ico" />
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            <meta
+                name="description"
+                content={project.description}
+            />
+            <meta name="author" content="John Swan" />
+            <meta name="keywords" content="John Swan, Web Developer, React, Next.js, Front-End, Developer, Portfolio, Project"/>
+        </Head>
       {/* Banner */}
       <div className="relative">
         <Image

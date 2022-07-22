@@ -13,14 +13,17 @@ export default function Portfolio({ projects }: Props) {
   console.log(projects)
   return (
     <div className="min-h-screen">
-      <Head>
-        <title>Portfolio | JS</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="John Swan's Front-End Web Developer portfolio. Open for hire and freelancing opportunities."
-        />
-      </Head>
+        <Head>
+            <title>Portfolio | JS</title>
+            <link rel="icon" href="/favicon.ico" />
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            <meta
+                name="description"
+                content="John Swan's Front-End Web Developer portfolio. Open for hire and freelancing opportunities."
+            />
+            <meta name="author" content="John Swan" />
+            <meta name="keywords" content="John Swan, Web Developer, React, Next.js, Front-End, Developer, Portfolio"/>
+        </Head>
 
       <Hero />
 
