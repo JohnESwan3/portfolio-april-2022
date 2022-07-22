@@ -23,12 +23,38 @@ export default {
       },
     },
     {
+      name: 'highlight',
+      Title: 'Highlight on Home Page?',
+      type: 'boolean'
+    },
+    {
       name: 'mainImage',
       title: 'Main image',
       type: 'image',
       options: {
         hotspot: true,
       },
+    },
+    {
+      name: 'mainSkill',
+      title: 'Main Skill',
+      type: 'reference',
+      to: { type: 'skill' },
+    },{
+      name: 'skill2',
+      title: 'Skill 2',
+      type: 'reference',
+      to: { type: 'skill' },
+    },{
+      name: 'skill3',
+      title: 'Skill 3',
+      type: 'reference',
+      to: { type: 'skill' },
+    },{
+      name: 'skill4',
+      title: 'Skill 4',
+      type: 'reference',
+      to: { type: 'skill' },
     },
     {
       name: 'publishedAt',

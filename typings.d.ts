@@ -23,12 +23,25 @@ export interface Project {
   _createdAt: string
   title: string
   description: string
-
+  highlight: boolean
   mainImage: {
     asset: {
       url: string
     }
   }
+  mainSkill: {
+    title: string
+    mainImage: string
+  },skill2: {
+    name: string
+    image: string
+  },skill3: {
+    name: string
+    image: string
+  },skill4: {
+    name: string
+    image: string
+  },
   slug: {
     current: string
   }

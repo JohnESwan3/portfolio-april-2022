@@ -3,14 +3,16 @@ import Hero from '../components/Home/Hero'
 import Content from '../components/Home/Content'
 import Process from '../components/Home/Process'
 import Link from 'next/link'
+import Image from 'next/image'
 import { sanityClient, urlFor } from '../sanity'
-import { Skill } from '../typings'
+import {Project, Skill} from '../typings'
 
 interface Props {
+  projects: [Project]
   skills: [Skill]
 }
 
-export default function Home({ skills }: Props) {
+export default function Home({ skills, projects }: Props) {
   return (
     <div>
       <Head>
@@ -23,10 +25,42 @@ export default function Home({ skills }: Props) {
       </Head>
       <main className="min-h-screen">
         <Hero />
+        {/*Highlighted Projects*/}
+        <section className="mx-auto max-w-7xl px-4 py-16">
+          <div className="mb-10 max-w-xl sm:text-center md:mx-auto md:mb-12 lg:max-w-2xl">
+            <h2 className="mb-6 max-w-lg font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+              Top Projects
+            </h2>
+          </div>
+          <div className="mx-auto grid max-w-7xl grid-cols-1 gap-3 p-2 sm:grid-cols-2 md:gap-6 md:p-6  lg:grid-cols-3">
+            {projects.map((project) => (
+                <Link key={project._id} href={`/portfolio/${project.slug.current}`}>
+                  <div className="group cursor-pointer overflow-hidden rounded-lg border shadow-md">
+                    <Image
+                        layout="responsive"
+                        blurDataURL={urlFor(project.mainImage).url()!}
+                        width={350}
+                        height={240}
+                        quality={50}
+                        src={urlFor(project.mainImage).url()!}
+                        className="h-60 w-full object-cover transition-transform duration-200 ease-in-out group-hover:scale-105"
+                        alt={project.title}
+                    />
+                    <div className="flex justify-between bg-white p-5">
+                      <div>
+                        <p className="text-lg font-bold">{project.title}</p>
+                        <p>{project.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+            ))}
+          </div>
+        </section>
         <Content />
         <Process />
 
-        <div className="mx-auto items-center px-4 py-16 text-center sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 lg:py-20">
+        <section className="mx-auto items-center px-4 py-16 text-center sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8 lg:py-20">
           <div className="mb-10 max-w-xl sm:text-center md:mx-auto md:mb-12 lg:max-w-2xl">
             <h2 className="mb-6 max-w-lg font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
               Skills <br />{' '}
@@ -55,7 +89,7 @@ export default function Home({ skills }: Props) {
               </Link>
             ))}
           </div>
-        </div>
+        </section>
       </main>
     </div>
   )
@@ -68,9 +102,23 @@ export const getServerSideProps = async () => {
     slug
   }`
 
+  const projectQuery = `*[_type == "project" && highlight == true ] | order(title asc){
+    _id,
+    title,
+    mainImage,
+    slug,
+    mainSkill,
+    skill2,
+    skill3,
+    skill4,
+    description
+  }`
+
+  const projects = await sanityClient.fetch(projectQuery)
   const skills = await sanityClient.fetch(query)
   return {
     props: {
+      projects,
       skills,
     },
   }

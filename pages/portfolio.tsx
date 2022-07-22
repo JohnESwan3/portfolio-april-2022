@@ -58,6 +58,7 @@ export const getServerSideProps = async () => {
     title,
     mainImage,
     slug,
+    skill,
     description
   }`
 
