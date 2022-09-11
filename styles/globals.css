@@ -30,3 +30,7 @@
   background: transparent; /* Optional: just make scrollbar invisible */
 }
 
+* {
+  font-family: "Poppins";
+}
+

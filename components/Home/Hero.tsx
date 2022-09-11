@@ -16,7 +16,7 @@ export default function Hero() {
       <div className=" flex h-screen items-center justify-center bg-slate-900 bg-opacity-75 text-right backdrop-blur-sm">
         <div className="flex flex-col items-center space-y-6">
           <div className="space-y-4 border-b border-cyan-600 pb-6">
-            <h1 className="max-w-lg font-sans text-4xl font-semibold tracking-tight text-white sm:text-5xl sm:leading-none md:text-6xl xl:text-7xl">
+            <h1 className="max-w-lg text-4xl font-semibold tracking-normal text-white sm:text-5xl sm:leading-none md:text-6xl xl:text-7xl">
               John Swan
             </h1>
             <p className="text-sm text-slate-200 md:text-base lg:text-lg">
