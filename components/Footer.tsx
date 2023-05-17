@@ -84,7 +84,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col justify-between border-t border-slate-800 pt-5 pb-10 sm:flex-row">
           <p className="text-sm text-slate-500">
-            © Copyright 2022 John Swan. All rights reserved.
+            © Copyright 2023 John Swan. All rights reserved.
           </p>
           <div className="mt-4 flex items-center space-x-4 sm:mt-0">
             {/* Twitter */}
