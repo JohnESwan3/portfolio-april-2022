@@ -4,7 +4,7 @@ export default function Content2() {
       <div className="mb-10 max-w-xl sm:text-center md:mx-auto md:mb-12 lg:max-w-2xl">
         <div>
           <p className="mb-4 inline-block rounded-full px-3 py-px text-sm font-semibold uppercase tracking-wider text-cyan-600">
-            2022
+            2023
           </p>
         </div>
         <h2 className="mb-6 max-w-lg font-sans text-3xl font-bold leading-none tracking-tight text-slate-900 sm:text-4xl md:mx-auto">
