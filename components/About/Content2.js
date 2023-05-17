@@ -11,7 +11,7 @@ export default function Content2() {
           Goals for 2023
         </h2>
         <p className="text-base text-slate-700 md:text-lg">
-          There are many goals that I have for 2022. Some of them are listed
+          There are many goals that I have for 2023. Some of them are listed
           below
         </p>
       </div>
