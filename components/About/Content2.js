@@ -8,7 +8,7 @@ export default function Content2() {
           </p>
         </div>
         <h2 className="mb-6 max-w-lg font-sans text-3xl font-bold leading-none tracking-tight text-slate-900 sm:text-4xl md:mx-auto">
-          Goals for 2022
+          Goals for 2023
         </h2>
         <p className="text-base text-slate-700 md:text-lg">
           There are many goals that I have for 2022. Some of them are listed
